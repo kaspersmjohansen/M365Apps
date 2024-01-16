@@ -1,19 +1,20 @@
-<Configuration ID="9aa11e20-2e29-451a-b0ba-f1ae3e89d18d">
-  <Add OfficeClientEdition="64" Channel="MonthlyEnterprise" MigrateArch="TRUE">
+<Configuration ID="d8abe1e7-9b45-4476-ae74-ad5f24cc9943">
+  <Add OfficeClientEdition="64" Channel="Current">
     <Product ID="O365ProPlusRetail">
       <Language ID="en-us" />
       <ExcludeApp ID="Groove" />
       <ExcludeApp ID="Lync" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="Teams" />
       <ExcludeApp ID="Bing" />
     </Product>
   </Add>
-  <Property Name="SharedComputerLicensing" Value="0" />
-  <Property Name="FORCEAPPSHUTDOWN" Value="TRUE" />
-  <Property Name="DeviceBasedLicensing" Value="0" />
-  <Property Name="SCLCacheOverride" Value="0" />
   <Updates Enabled="TRUE" />
+  <RemoveMSI />
   <AppSettings>
-    <Setup Name="Company" Value="Company Name" />
+    <User Key="software\microsoft\office\16.0\excel\options" Name="defaultformat" Value="51" Type="REG_DWORD" App="excel16" Id="L_SaveExcelfilesas" />
+    <User Key="software\microsoft\office\16.0\powerpoint\options" Name="defaultformat" Value="27" Type="REG_DWORD" App="ppt16" Id="L_SavePowerPointfilesas" />
+    <User Key="software\microsoft\office\16.0\word\options" Name="defaultformat" Value="" Type="REG_SZ" App="word16" Id="L_SaveWordfilesas" />
   </AppSettings>
-  <Display Level="None" AcceptEULA="FALSE" />
+  <Display Level="None" AcceptEULA="TRUE" />
 </Configuration>
